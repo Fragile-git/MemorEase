@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemorEase</title>
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1> MemorEase – Your Personal Hub for Memorization and Learning</h1>
+    </header>
+
+    <section class="body">
+        <div class="text">
+            <h1> <img src="img/icon.png" alt="Icon"> MemorEase</h1>
+            <h2>Simplify Your Learning with Personal Notes</h2>
+            <article>
+                Welcome to MemorEase, a simple yet effective web application designed to help you create notes.
+                <br><br>
+                Whether you're preparing for a big exam, learning new skills, or just want to keep important information
+                organized, MemorEase is here to assist you in mastering the material.
+            </article>
+
+        </div>
+
+        <div class="fields">
+            <div class="login">
+                <div>
+                    <h1>Welcome Back!</h1>
+                </div>
+                <div class="mode">
+                    <p id="modetext">Login</p>
+                    <button id="changemode">Sign Up</button>
+                </div>
+                <div class="input">
+                    <form >
+                        <div class="name">
+                            <section>
+                                <label for="firstname">First Name:</label>
+                                <input type="text" id="firstname" placeholder="First name" required>
+                            </section>
+
+                            <section>
+                                <label for="lastname">Last Name:</label>
+                                <input type="text" id="lastname" placeholder="Last name" required>
+                            </section>
+                        </div>
+                        <!-- <p class="details">
+                            Account Details
+                        </p> -->
+                        <div class="credentials">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" placeholder="Username" required>
+
+                            <p>
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" placeholder="Password" required>
+                                <i class="bi bi-eye-slash" id="togglePassword"></i>
+                            </p>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="persist">
+                            <label for="persist"> Keep me logged in</label>
+                        </div>
+                        <button type="submit" id="submit">Log In</button>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 Andrey Fermin. All rights reserved.</p>
+    </footer>
+
+
+
+
+
+</body>
+
+</html>

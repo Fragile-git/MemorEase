@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --color-1: #eaf9ef;
+    --color-2: #c0e6ba;
+    --color-3: #4ca771;
+    --color-4: #f5fff9;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    background-color: var(--color-4);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.header {
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: #333;
+    text-align: left;
+    vertical-align: middle;
+    box-shadow: 3px 3px 10px 3px #ddd;
+    background-color: -var(--color-1);
+    padding: 0.5em;
+    padding-left: 20px;
+}
+
+.header img {
+    max-height: 2em;
+    max-width: 2em;
+    vertical-align: middle;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 1em;
+    padding: 2em 5em;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    font-size: 1.5em;
+}
+
+.text article {
+    text-align: justify;
+    font-size: 1em;
+    padding-top: .5em;
+    width: 90%
+}
+
+.text img {
+    max-height: 2em;
+    max-width: 2em;
+    vertical-align: middle;
+}
+
+.fields {
+    width: 95%;
+    background-color: var(--color-1);
+    box-shadow: 3px 3px 10px 3px #ddd;
+    border-radius: 5% 5% 5% 5% / 5% 5% 5% 5%;
+    padding: 1em;
+    font-size: 1.5em;
+    transition: all 1s ease-in;
+}
+
+.fields.active {
+    background-color: var(--color-2);
+}
+
+.login {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .2em;
+    padding: 0.5em;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.mode {
+    width: 40%;
+    height: 1.5em;
+    border-radius: 50px;
+    box-shadow: 0 0 10px 2px var(--color-2);
+    background-color: var(--color-1); 
+    display: flex;
+    position: relative; 
+    transition: all 1s ease-in;
+
+}
+
+.mode.active {
+    background-color: var(--color-2);
+    box-shadow: 0 0 10px 2px var(--color-1);
+}
+
+
+.mode button {
+    font-size: .6em;
+    font-weight: bold;
+    color: #333;
+    width: 50%;
+    height: 100%;
+    border-radius: 50px;
+    border: 0px solid black;
+    background-color: var(--color-2); 
+    position: absolute;
+    left: 50%; 
+    top: 0%;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 1s ease;
+}
+
+.mode button.active {
+    background-color: var(--color-1);
+    left: 0%; 
+}
+
+.mode p {
+    font-size: .6em;
+    font-weight: bold;
+    vertical-align: middle;
+    align-self: center;
+    color: #333;
+    position: relative;
+    left: 10%;  
+    z-index: 1;
+    padding: 10px;
+    transition: all 1s ease;
+}
+
+.mode p.active {
+    left: 50%; 
+}
+
+.input {
+    text-align: left;
+    width: 100%;
+    align-self: center;
+    gap: 2px;
+    flex-grow: 2;
+}
+
+.name{
+    display: flex;
+    height: 0;
+    opacity: 0;
+    transition: all 1s ease-in;
+    visibility: hidden;
+}
+
+.details {
+    font-size: 1.1em;
+    font-weight: bold;
+    height: 0px;
+    opacity: 0;
+    transition: all 1s ease-in;
+    visibility: hidden;
+}
+
+.name.active {
+    opacity: 1;
+    height: 100px;
+    visibility: inherit;
+}
+
+.details.active {
+    opacity: 1;
+    height: 40px;
+    visibility: inherit;
+}
+
+.name input{
+    font-size: .6em;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #333;
+    position: relative;
+    z-index: 1;
+}
+
+.credentials input {
+    font-size: .6em;
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.input button {
+    width: 25%;
+    font-size: .6em;
+    height: 2.5em;
+    border-radius: 50px;
+    border: 1px solid #333;
+    background-color: var(--color-3);
+    color: var(--color-4);
+    font-weight: bold;
+    cursor: pointer;
+    align-self: center;
+}
+
+.input i {
+    margin-left: -40px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.checkbox {
+    font-size: 0.5em;
+    display: flex;
+    justify-content: left;
+    gap: 5px;
+    transition: all 1s ease-in;
+    opacity: 1;
+}
+
+.checkbox.active {
+    opacity: 0;
+    height: 0;
+}
+
+#submit:hover {
+    opacity: 0.8;
+}
+
+.footer {
+    font-size: 0.5em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: #333;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #333;
+    padding: 0.5em;
+}
